@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance Calculator</title>
+
+  style.css
+
+  windcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body id="body" class="light">
+
+  <div id="card" class="container">
+
+    <!-- Header -->
+    <div class="header">
+
+      <div>
+        <h1>Attendance Calculator</h1>
+        <p>Track attendance and bunk safely</p>
+      </div>
+
+      <button id="themeBtn" onclick="toggleTheme()">
+        <i data-lucide="moon"></i>
+      </button>
+
+    </div>
+
+    <!-- Inputs -->
+    <div class="input-group">
+
+      <div>
+        <label>Total Classes Conducted</label>
+
+        <input
+          type="number"
+          id="total"
+          placeholder="Enter total classes conducted"
+          oninput="calculate()"
+        >
+      </div>
+
+      <div>
+        <label>Classes Attended</label>
+
+        <input
+          type="number"
+          id="attended"
+          placeholder="Enter attended classes"
+          oninput="calculate()"
+        >
+      </div>
+
+      <!-- Slider -->
+      <div>
+
+        <div class="slider-top">
+          <label>Target Attendance</label>
+          <span id="targetLabel">75%</span>
+        </div>
+
+        <input
+          type="range"
+          id="target"
+          min="50"
+          max="95"
+          step="5"
+          value="75"
+          oninput="updateTarget(); calculate();"
+        >
+
+      </div>
+
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+
+      <div class="box">
+        <p>Current Attendance</p>
+        <h2>
+          <span id="percentage">0.0</span>%
+        </h2>
+      </div>
+
+      <div class="box">
+        <p>Absences</p>
+        <h2 id="absent">0</h2>
+      </div>
+
+    </div>
+
+    <!-- Result -->
+    <div id="resultBox" class="result-box">
+
+      <div class="result-content">
+
+        <div id="iconBox" class="icon-box">
+          <i id="statusIcon" data-lucide="info"></i>
+        </div>
+
+        <div>
+
+          <h3 id="statusTitle">
+            Waiting for input
+          </h3>
+
+          <p id="message">
+            Enter your class details to calculate attendance.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+      <button onclick="resetAll()" class="reset-btn">
+        Reset
+      </button>
+
+    </div>
+
+  </div>
+
+  script.js
+
+</body>
+</html>
