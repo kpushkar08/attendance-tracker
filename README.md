@@ -17,7 +17,6 @@ A clean and responsive attendance calculator built for students to track attenda
 - **CSS3**
 - **Vanilla JavaScript**
 - **Tailwind CSS**
-- **Lucide Icons**
 
 ## 💻 How to Use
 
