@@ -179,3 +179,21 @@ function calculate() {
 
   else {
 
+
+    const need = Math.ceil(
+      ((target * total) - attended) / (1 - target)
+    );
+
+    title.innerText = "Attendance Low";
+
+    message.innerHTML =
+      `Attend <strong>${need}</strong> consecutive classes to reach ${targetPercent}%.`;
+
+    resultBox.style.background = "#fefce8";
+    resultBox.style.borderColor = "#fde68a";
+
+    iconBox.style.background = "#fef3c7";
+
+    setIcon("alert-triangle");
+  }
+}
